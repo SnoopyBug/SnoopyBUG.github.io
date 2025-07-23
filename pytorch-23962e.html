@@ -29,7 +29,7 @@
   <meta property="og:title" content="PyTorch构造数据集">
   
   
-    <meta property="og:image" content="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;☝🏻&lt;/text&gt;&lt;/svg&gt;">
+    <meta property="og:image" content="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;notion://custom_emoji/c972aa29-82cc-4808-9b05-fcc07b4bdab7/23462e26-a1cf-80fa-836d-007a6fac0125&lt;/text&gt;&lt;/svg&gt;">
   
   <style>
     .DateTagBar {
@@ -54,6 +54,8 @@
     
   
     
+  
+    
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="about.html">
         <div class="Navbar__Btn">
@@ -67,8 +69,6 @@
   
     
   
-    
-  
 </nav>
   <header class="Header">
     
@@ -76,10 +76,17 @@
     </div>
     
       <div class="Header__Icon">
-        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;☝🏻&lt;/text&gt;&lt;/svg&gt;"></span>
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;notion://custom_emoji/c972aa29-82cc-4808-9b05-fcc07b4bdab7/23462e26-a1cf-80fa-836d-007a6fac0125&lt;/text&gt;&lt;/svg&gt;"></span>
       </div>
     
     <h1 class="Header__Title">PyTorch构造数据集</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Dec 28, 2021</span>
+        
+        
+      </div>
     
   </header>
   <article id="https://www.notion.so/23962e26a1cf80f5942fda5e574b15e2" class="PageRoot"><h2 id="https://www.notion.so/23962e26a1cf8089b7a7eda6c1aef194" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/23962e26a1cf8089b7a7eda6c1aef194"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">1 储存图片路径与标签的文件</strong></span></span></h2><div id="https://www.notion.so/23962e26a1cf80adb3dff292430eeb95" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">以txt文件为例，train.txt和test.txt文件中每行都只有一张图片的路径、对应的标签。test.txt文件某片段如下，每行最后的数字是图片的标签。</span></span></p></div><pre id="https://www.notion.so/23962e26a1cf80b4b664efcca0aa09c9" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span>test/2/hand1_2_top_seg_4_cropped.png 2
